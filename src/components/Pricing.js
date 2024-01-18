@@ -2,7 +2,8 @@ import React from "react";
 import wigData from "../data/WigData";
 import frontalData from "../data/FrontalData";
 import careData from "../data/CareData";
-import hr from "../assets/hr.png";
+import hrLong from "../assets/hr-long.png";
+import priceImage from "../assets/pricing-img.png";
 
 const DisplayWig = ({ wigs }) => {
   return wigs.map((wig) => (
@@ -40,32 +41,48 @@ function Pricing() {
         Our Priciing
       </h2>
       <h3 className="text-center text-black text-[1rem] font-light px-[6%]">
-        When it comes to your looks, your hair is Key! Your hair and hair
-        accessories give more importance to your personal taste and preferences.
+        When it comes to your looks, your hair is Key! <br />
+        Your hair and hair accessories give more importance to your personal
+        taste and preferences.
       </h3>
-      <div className="flex flex-col gap-20 py-[10%] px-[5%] w-[100%]">
-        <div>
-          <h3 className="text-3xl font-medium text-black">Wig</h3>
+
+      <div className="flex items-center justify-center w-full laptop:justify-between laptop:px-[7%] laptop:pt-[5%]">
+        <div className="flex flex-col gap-20 py-[10%] px-[5%] w-full laptop:w-auto laptop:p-0 laptop:gap-10">
           <div>
-            <DisplayWig wigs={wigData} />
+            <h3 className="text-3xl font-medium text-black">Wig</h3>
+            <div>
+              <DisplayWig wigs={wigData} />
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-3xl font-medium text-black">Frontal</h3>
+            <div>
+              <DisplayFrontal frontals={frontalData} />
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-3xl font-medium text-black">Wig Care</h3>
+            <div>
+              <DisplayCare cares={careData} />
+            </div>
           </div>
         </div>
-
-        <div>
-          <h3 className="text-3xl font-medium text-black">Frontal</h3>
-          <div>
-            <DisplayFrontal frontals={frontalData} />
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-3xl font-medium text-black">Wig Care</h3>
-          <div>
-            <DisplayCare cares={careData} />
-          </div>
+        <div className="hidden w-[500px] h-[500px] overflow-hidden laptop:block">
+          <img
+            src={priceImage}
+            alt="price"
+            className="w-[100%] h-[100%] object-cover"
+          />
         </div>
       </div>
-      <img src={hr} alt="line break" className="w-[300px] pt-[20%]" />
+
+      <img
+        src={hrLong}
+        alt="line break"
+        className="w-[300px] pt-[20%] laptop:pt-[10%] laptop:w-[70%]"
+      />
     </div>
   );
 }

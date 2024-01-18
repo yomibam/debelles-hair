@@ -16,11 +16,15 @@ const ServiceLink = ({ serviceName }) => {
 
 const DisplayServices = ({ services }) => {
   return services.map((service) => (
-    <div onClick={ServiceLink(service)} className="flex flex-col gap-3">
-      <div className="w-[300px] h-[300px] overflow-hidden">
+    <div
+      onClick={ServiceLink(service)}
+      className="flex flex-col items-center justify-center gap-3"
+    >
+      <div className="w-[300px] h-[300px] overflow-hidden ">
         <img
           src={require(`../assets/${service.serviceImg}`)}
           alt={service.serviceName}
+          className="w-[100%] h-[100%] object-cover"
         />
       </div>
       <h3 className="pt-3 text-3xl font-medium text-black">
@@ -40,13 +44,17 @@ function Services() {
         Our Services
       </h2>
       <h3 className="text-center text-black text-[1rem] font-light px-[6%]">
-        When it comes to your looks, your hair is Key! Your hair and hair
+        When it comes to your looks, your hair is Key! <br /> Your hair and hair
         accessories give more importance to your personal taste and preferences.
       </h3>
-      <div className="flex items-center gap-5 overflow-x-auto text-center flex-nowrap w-[100%] justify-start py-[5%]">
+      <div className="flex items-center gap-5 overflow-x-auto text-center flex-nowrap w-[100%] justify-start py-[5%] laptop:pb-0">
         <DisplayServices services={serviceData} />
       </div>
-      <img src={hr} alt="line break" className="w-[120px] pt-[20%]" />
+      <img
+        src={hr}
+        alt="line break"
+        className="w-[120px] pt-[20%] laptop:pt-[10%]"
+      />
     </div>
   );
 }
