@@ -46,7 +46,7 @@ function Pricing() {
         taste and preferences.
       </h3>
 
-      <div className="flex items-center justify-center w-full laptop:justify-between laptop:px-[7%] laptop:pt-[5%]">
+      <div className="flex items-center justify-center w-full laptop:justify-between laptop:px-[15%] laptop:pt-[5%] laptop:w-full TV:px-[20%]">
         <div className="flex flex-col gap-20 py-[10%] px-[5%] w-full laptop:w-auto laptop:p-0 laptop:gap-10">
           <div>
             <h3 className="text-3xl font-medium text-black">Wig</h3>
@@ -73,7 +73,7 @@ function Pricing() {
           <img
             src={priceImage}
             alt="price"
-            className="w-[100%] h-[100%] object-cover"
+            className="w-[100%] h-[100%] object-cover bg"
           />
         </div>
       </div>

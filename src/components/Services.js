@@ -30,7 +30,7 @@ const DisplayServices = ({ services }) => {
       <h3 className="pt-3 text-3xl font-medium text-black">
         {service.serviceName}
       </h3>
-      <p className="text-black text-[15px] font-light">
+      <p className="text-black text-[15px] font-light TV:px-[5%]">
         {service.serviceDescription}
       </p>
     </div>
@@ -47,7 +47,7 @@ function Services() {
         When it comes to your looks, your hair is Key! <br /> Your hair and hair
         accessories give more importance to your personal taste and preferences.
       </h3>
-      <div className="flex items-center gap-5 overflow-x-auto text-center flex-nowrap w-[100%] justify-start py-[5%] laptop:pb-0">
+      <div className="flex items-center gap-5 overflow-x-auto text-center flex-nowrap w-[100%] justify-start py-[5%] laptop:pb-0 TV:gap-0">
         <DisplayServices services={serviceData} />
       </div>
       <img

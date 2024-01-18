@@ -4,10 +4,10 @@ import hr from "../assets/hr.png";
 
 function Accessories() {
   return (
-    <div className="flex flex-col items-center justify-center gap-5 px-[5%] py-[10%] bg-[#fff2f2]">
+    <div className="flex flex-col items-center justify-center gap-5 px-[5%] py-[10%] bg-[#fff2f2] ">
       <div className="flex flex-col items-center justify-center gap-5 laptop:flex-row laptop:px-[10%]">
         <div className="laptop:w-full">
-          <div className="w-[350px] h-[350px] overflow-hidden laptop:rounded-[50%] laptop:w-[400px] laptop:h-[400px]">
+          <div className="w-[350px] h-[350px] overflow-hidden laptop:rounded-[50%] laptop:w-[400px] laptop:h-[400px] TV:w-[600px] TV:h-[600px]">
             <img
               src={accessories}
               alt="accessories"

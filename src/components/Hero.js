@@ -8,7 +8,7 @@ import facebook from "../assets/facebook-icon.png";
 
 function Hero() {
   return (
-    <div className=" p-[5%] flex flex-col items-center justify-center bg-[#FCE3E9] gap-[25px] laptop:flex-row laptop:gap-0 laptop:py-0 laptop:px-[10%]">
+    <div className=" p-[5%] flex flex-col items-center justify-center bg-[#FCE3E9] gap-[25px] laptop:flex-row laptop:gap-0 laptop:py-0 laptop:px-[10%] TV:px-[15%] TV:pb-[5%]">
       <div className="flex flex-col items-center justify-center gap-[25px] laptop:items-start laptop:w-full">
         <h1 className="text-center text-black text-[2.5rem] font-medium laptop:text-left">
           Let your hair do <br /> the talking
@@ -23,7 +23,7 @@ function Hero() {
         </button>
       </div>
       <div className="flex flex-col w-full laptop:items-end">
-        <div className="hidden w-[650px] h-auto overflow-hidden laptop:block">
+        <div className="hidden w-[650px] h-auto overflow-hidden laptop:block TV:w-[800px]">
           <img
             src={heroImage}
             alt="hero"
