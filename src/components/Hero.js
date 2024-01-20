@@ -6,6 +6,15 @@ import tiktok from "../assets/tiktok-icon.png";
 import youtube from "../assets/youtube-icon.png";
 import facebook from "../assets/facebook-icon.png";
 
+const handleOrderNow = (e) => {
+  e.preventDefault();
+  window.open(
+    "https://wa.me/2349136225444?text=Hello,%20I'd%20like%20to%20place%20an%20order.",
+    "_blank",
+    "noopener noreferrer"
+  );
+};
+
 function Hero() {
   return (
     <div className=" p-[5%] flex flex-col items-center justify-center bg-[#FCE3E9] gap-[25px] laptop:flex-row laptop:gap-0 laptop:py-0 laptop:px-[10%] TV:px-[15%] TV:pb-[5%]">
@@ -18,7 +27,10 @@ function Hero() {
           hair accessories gives more importance <br /> to your personal taste
           and preferences.
         </h3>
-        <button className="px-4 py-1.5 border text-black border-black rounded-3xl text-[1rem] font-normal">
+        <button
+          className="px-4 py-1.5 border text-black border-black rounded-3xl text-[1rem] font-normal"
+          onClick={handleOrderNow}
+        >
           Order Now
         </button>
       </div>
