@@ -17,6 +17,7 @@ const ServiceLink = ({ serviceName }) => {
 const DisplayServices = ({ services }) => {
   return services.map((service) => (
     <div
+      key={service.id}
       onClick={ServiceLink(service)}
       className="flex flex-col items-center justify-center gap-3"
     >

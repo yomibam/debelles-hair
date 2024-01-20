@@ -7,7 +7,7 @@ import priceImage from "../assets/pricing-img.png";
 
 const DisplayWig = ({ wigs }) => {
   return wigs.map((wig) => (
-    <div className="flex items-center justify-between pt-[3%]">
+    <div key={wig.id} className="flex items-center justify-between pt-[3%]">
       <div className="text-black text-[15px] font-light">{wig.wigName}</div>
       <div className="text-black text-[15px] font-light">{wig.wigPrice}</div>
     </div>
@@ -15,7 +15,7 @@ const DisplayWig = ({ wigs }) => {
 };
 const DisplayFrontal = ({ frontals }) => {
   return frontals.map((frontal) => (
-    <div className="flex items-center justify-between pt-[3%]">
+    <div key={frontal.id} className="flex items-center justify-between pt-[3%]">
       <div className="text-black text-[15px] font-light">
         {frontal.frontalName}
       </div>
@@ -27,7 +27,7 @@ const DisplayFrontal = ({ frontals }) => {
 };
 const DisplayCare = ({ cares }) => {
   return cares.map((care) => (
-    <div className="flex items-center justify-between pt-[3%]">
+    <div key={care.id} className="flex items-center justify-between pt-[3%]">
       <div className="text-black text-[15px] font-light">{care.careName}</div>
       <div className="text-black text-[15px] font-light">{care.carePrice}</div>
     </div>
